@@ -24,7 +24,7 @@
     // Download the data
     myConnector.getData = function(table, doneCallback) {
           //url="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson";
-          qeuryUrl="http://localhost:3000/stations";
+          qeuryUrl="http://localhost:3000?name="+tableau.connectionData;
           tableData = [];
           var xmlRequest=$.ajax({
             methos: 'GET',
@@ -64,9 +64,9 @@
     // Create event listeners for when the user submits the form
     $(document).ready(function() {
         $("#submitButton").click(function() {
-            tableau.connectionName = "New York City Public Data"; // This will be the data source name in Tableau
+            tableau.connectionName = "NewYorkCityPublicData"; // This will be the data source name in Tableau
             //alert("select:"+ $("#dropdownmenu").val());
-            tableau.connectionData = $("#dropdownmenu").val();
+            tableau.connectionData = $("#dropdownmenu").val().trim();
             tableau.submit(); // This sends the connector object to Tableau
         });
     });

@@ -14,11 +14,20 @@
 
 <body>
     <form id="dropdowndemo">
-        <select id="dropdownmenu">
-        <option value = "boundary" selected>City Boundary</option>
-        <option value="stations">Subway Stations</option>
-        </select>
+       
     <div class="container container-table">
+        <div class="row vertical-center-row">&nbsp; &nbsp;</div>
+        <div class="row vertical-center-row">
+        <div class="text-center col-md-4 col-md-offset-4">        
+            <label class="text-center">Choose NYC data:</label>
+            <select id="dropdownmenu">
+            <option value = "boundary" selected>Borough Boundary</option>
+            <option value="stations">Subway Stations</option>
+            </select>  
+
+         </div>
+        </div>
+           
         <div class="row vertical-center-row">
             <div class="text-center col-md-4 col-md-offset-4">
                 <button type="button" id="submitButton" class="btn btn-success" style="margin: 10px;">Get Big Query Geography Data!</button>
